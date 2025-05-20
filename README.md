@@ -2,7 +2,7 @@
 
 **Starter Tutorial (Using Gemini API) For LlamaIndex:**
 
-#1. Basic Agent Example (Source: LlamaIndex Docs)
+#Basic Agent Example (Source: LlamaIndex Docs)
 
 As a hands-on project, I followed a starter tutorial to build a simple yet functional AI agent using LlamaIndex with Gemini API. This agent was designed to solve math problems by calling a custom tool specifically for multiplication showcasing how to integrate tools and local models efficiently.
 
@@ -11,7 +11,7 @@ As a hands-on project, I followed a starter tutorial to build a simple yet funct
 •	Internally routes the query to a Python multiply (a, b) function.
 •	Returns the correct computed answer, e.g., "The answer to 1234 * 4567 is: 5,618,916."
 
-#2.	AI Agent Using RAG Capabilities
+#AI Agent Using RAG Capabilities
 
 Using the LlamaIndex Starter Tutorial, I extended a basic function-agent by adding RAG capabilities enabling the AI assistant to solve math problems and answer natural language questions from documents.
 
