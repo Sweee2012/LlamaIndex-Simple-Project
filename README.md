@@ -1,28 +1,54 @@
-# LlamaIndex-Simple-Project
+💡 LlamaIndex-Simple-Project
+A hands-on project built by following the official LlamaIndex Starter Tutorial, demonstrating how to create an AI agent that can both solve math problems and answer natural language questions from documents using RAG (Retrieval-Augmented Generation). This project uses the Gemini API as the LLM backend.
 
-**Starter Tutorial (Using Gemini API) For LlamaIndex:**
+🚀 Project 1: Basic Function-Agent (Using Gemini API)
+This module is based on the Basic Agent Example from the LlamaIndex documentation. The goal was to build a simple AI assistant that calls a Python function to perform calculations.
 
-#Basic Agent Example (Source: LlamaIndex Docs)#
+🔧 What the Agent Can Do:
+Accepts natural language prompts like:
+➤ "What is 1234 * 4567?"
 
-As a hands-on project, I followed a starter tutorial to build a simple yet functional AI agent using LlamaIndex with Gemini API. This agent was designed to solve math problems by calling a custom tool specifically for multiplication showcasing how to integrate tools and local models efficiently.
+Internally maps the query to a multiply(a, b) Python function.
 
-**What the Agent Can Do:**
-•	Takes a user prompt like: "What is 1234 * 4567?"
+Returns the accurate result:
+➤ "The answer to 1234 * 4567 is: 5,618,916."
 
-•	Internally routes the query to a Python multiply (a, b) function.
+🛠️ Tech Stack:
+LlamaIndex – For agent and workflow setup
 
-•	Returns the correct computed answer, e.g., "The answer to 1234 * 4567 is: 5,618,916."
+Gemini API – As the LLM backend
 
-#AI Agent Using RAG Capabilities#
+Python (asyncio) – For asynchronous execution
 
-Using the LlamaIndex Starter Tutorial, I extended a basic function-agent by adding RAG capabilities enabling the AI assistant to solve math problems and answer natural language questions from documents.
+FunctionAgent – To route tool-based queries
 
-**What the Agent Can Do:**
-•	Respond to multi-part queries like:
-"What did the author do in college? Also, what's 7 * 8?"
+📚 Project 2: AI Agent with RAG Capabilities
+Building on top of the function-agent setup, I extended the assistant to handle document-based queries using RAG (Retrieval-Augmented Generation).
 
-•	Routes the question to the right tool:
-o	RAG for answering from the document.
-o	Math tool for computation.
+🔧 What the Agent Can Do:
+Handles combined questions like:
+➤ "What did the author do in college? Also, what's 7 * 8?"
 
-•	Returns combined, accurate, and context-aware responses.
+Dynamically routes queries to the appropriate tool:
+
+🧠 RAG Tool – Searches and summarizes content from a local document
+
+➗ Math Tool – Performs calculations
+
+Delivers combined, accurate, and context-aware responses.
+
+🧠 Tech Additions:
+SimpleDirectoryReader – To load documents
+
+VectorStoreIndex – For document embedding and retrieval
+
+Hugging Face Embeddings (BAAI/bge-base-en-v1.5) – Used for RAG indexing
+
+✅ Key Learnings:
+How to build agents using LlamaIndex and Gemini API
+
+How to integrate custom tools and route function calls
+
+Implementing RAG workflows for document search and Q&A
+
+Running a complete local or cloud-assisted AI assistant
